@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let Circle = function (radius) { // khoi tao phuong thuc voi tham so truyen vao//
+        this.radius = radius;
+
+
+        this.getRadius = function () { // xay dung phuong thuc tra ve ban kinh//
+            return this.radius;
+
+        };
+
+        this.getArea = function () { // phuong thuc tinh dien tich//
+            return this.radius * this.radius * Math.PI
+        };
+    };
+    let circle = new Circle(4); // tao doi tuong//
+    let radius=circle.getRadius(); // truy cap phuong thuc vua tao//
+    let area=circle.getArea();
+    document.write("Radius is :" +radius +"<br>" + "Area is :" +Math.round(area *100)/100);
+    document.write("<br>");
+
+    let circle1 = new Circle(7);
+    let radius1 = circle1.getRadius();
+    let area1 = circle1.getArea();
+    document.write("Radius1 is :" + radius1 + "<br>" + "Area1 is :" +Math.round(area1 *100)/100);
+</script>
+</body>
+</html>
